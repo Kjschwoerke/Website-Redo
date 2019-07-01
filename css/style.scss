@@ -1,0 +1,814 @@
+body {
+margin: 0; 
+background: rgb(2,0,36);
+background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(89,25,25,1) 54%, rgb(100, 67, 67) 100%);
+min-height: 100vh;
+height: 100%;
+color: #F8F8F8;
+box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #F8F8F8;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 247px 14px 20px 14px 1fr 73px;
+    
+}
+
+.name-title-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #F8F8F8;
+    color: #707070;
+    
+    .name {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        font-family: 'Prompt', sans-serif;
+        font-weight: bold;
+        font-size: 3.75rem;
+        margin: 75px 0 0 5%;
+    }
+    .sub-title {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        font-family: 'Prompt', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 5%;
+    }
+}
+
+.image_placeholder_portrait {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background-color:#F8F8F8;
+}
+
+.image_placeholder_portrait img {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height:225px;
+    width: 210px;
+    border-radius: 50%;
+    border: solid #9B0F0F 2px;
+    margin-top: 10px;
+}
+
+.redline-top {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #9B0F0F;
+}
+
+.redline-bottom {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: #9B0F0F;
+}
+
+.portfolio {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+}
+
+.about {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+}
+
+.blog {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+}
+
+.resume {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+}
+
+// CSS for image slider
+
+.portfolio-page {
+    font-size: 3ex;
+    font-weight: bold;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    border-radius: 25px;
+    border: black solid 1px;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .items {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        animation: carouselAnim 30s infinite alternate linear;
+
+        .entry {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: #F8F8F8;
+            margin: 1em;
+            padding:.5em;
+            border-radius: 10px;
+            -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+            p {
+                text-align: center;
+                padding: 1em;
+                color: black;
+            }
+
+            @keyframes carouselAnim {
+                from {
+                    transform: translate(0,0);
+                }
+                to {
+                    transform:translate(calc(-100% + (5*300px)));
+                }
+            }
+
+        }
+    }
+
+}
+
+footer {
+    margin-top: 150px;
+    margin-left: 5%;
+}
+
+// This is the CSS for the Blog Page
+
+.blog_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+   
+}
+
+.blog_grid div h2 {
+    text-align: center;
+    background-color: #9b0f0f;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.blog_grid .blog p{
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: left;
+}
+
+.blog_container_1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_4 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_5 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_6 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+// Media Query Tablet
+
+@media only screen and (max-width: 965px){
+    body {
+        margin: 0; 
+        background: rgb(2,0,36);
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(89,25,25,1) 54%, rgb(100, 67, 67) 100%);
+        min-height: 100vh;
+        height: 100%;
+        color: #F8F8F8;
+        }
+        
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 247px 14px 20px 14px 1fr 73px;
+            
+        }
+        
+        .name-title-wrapper {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: #F8F8F8;
+            color: #707070;
+            
+            .name {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                font-family: 'Prompt', sans-serif;
+                font-weight: bold;
+                font-size: 2.5rem;
+                margin: 75px 0 0 5%;
+            }
+            .sub-title {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                font-family: 'Prompt', sans-serif;
+                font-size: 1rem;
+                margin-left: 5%;
+            }
+        }
+        
+        .image_placeholder_portrait {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height: 100%;
+            width: 100%;
+            background-color:#F8F8F8;
+            margin-right: 1em;
+        }
+        
+        .image_placeholder_portrait img {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height:225px;
+            width: 210px;
+            border-radius: 50%;
+            border: solid #9B0F0F 2px;
+            margin-top: 10px;
+        }
+        
+        .redline-top {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-color: #9B0F0F;
+        }
+        
+        .redline-bottom {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            background-color: #9B0F0F;
+        }
+        
+        .portfolio {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: center;
+        }
+        
+        .about {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: center;
+        }
+        
+        .blog {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: center;
+        }
+        
+        .resume {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: center;
+        }
+        
+        // CSS for image slider
+        
+        img {
+            width: 50%;
+            height: 50%;
+            border-radius: 25px;
+        }
+        
+        .container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        
+            .items {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                animation: carouselAnim 30s infinite alternate linear;
+        
+                .entry {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    position: relative;
+                    width: 300px;
+                    height: 300px;
+                    background: #F8F8F8;
+                    margin: 1em;
+                    padding:.5em;
+                    border-radius: 10px;
+                    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        
+                    p {
+                        text-align: center;
+                        padding: 1em;
+                        color: black;
+                    }
+        
+                    @keyframes carouselAnim {
+                        from {
+                            transform: translate(0,0);
+                        }
+                        to {
+                            transform:translate(calc(-100% + (3*300px)));
+                        }
+                    }
+        
+                }
+            }
+        
+        }
+        
+        footer {
+            margin-top: 150px;
+            margin-left: 5%;
+        }
+
+
+
+// This is the CSS for the Blog Page
+
+    .blog_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    }
+
+    .blog_container_1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    }
+
+    .blog_container_2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    }
+
+    .blog_container_3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    }
+
+    .blog_container_4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    }
+
+    .blog_container_5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    }
+
+    .blog_container_6 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    }
+}
+
+// Media Query for Mobile Devices
+
+@media only screen and (max-width: 690px){
+
+    body {
+        margin: 0; 
+        background: rgb(2,0,36);
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(89,25,25,1) 54%, rgb(100, 67, 67) 100%);
+        height: 100%;
+        color: #F8F8F8;
+        }
+        
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 247px 14px 20px 14px 1fr 73px;
+            
+        }
+        
+        .name-title-wrapper {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-color: #F8F8F8;
+            color: #707070;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            
+            .name {
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                font-family: 'Prompt', sans-serif;
+                font-weight: bold;
+                font-size: 2.5rem;
+                margin-top: 90px;
+            }
+            .sub-title {
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                font-family: 'Prompt', sans-serif;
+                font-size: 1rem;
+                margin-left: 0;
+            }
+        }
+        
+        .image_placeholder_portrait {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height: 100%;
+            width: 100%;
+            background-color:#F8F8F8;
+            display: hidden;
+            text-align: center;
+        }
+        
+        .image_placeholder_portrait img {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height:180px;
+            width: 175px;
+            border-radius: 50%;
+            border: solid #9B0F0F 2px;
+            margin-top: 10px;
+        }
+        
+        .redline-top {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background-color: #9B0F0F;
+        }
+        
+        .redline-bottom {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            background-color: #9B0F0F;
+        }
+        
+        .portfolio {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            text-align: center;
+        }
+        
+        .about {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            text-align: center;
+        }
+        
+        .blog {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            text-align: center;
+        }
+        
+        .resume {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            text-align: center;
+        }
+        
+        // CSS for image slider
+        
+        img {
+            width: 50%;
+            height: 50%;
+            border-radius: 25px;
+        }
+        
+        .container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        
+            .items {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                animation: carouselAnim 60s infinite alternate linear;
+        
+                .entry {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    position: relative;
+                    width: 300px;
+                    height: 300px;
+                    background: #F8F8F8;
+                    margin: 1em;
+                    padding:.5em;
+                    border-radius: 10px;
+                    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+        
+                    p {
+                        text-align: center;
+                        padding: 1em;
+                        color: black;
+                    }
+        
+                    @keyframes carouselAnim {
+                        from {
+                            transform: translate(0,0);
+                        }
+                        to {
+                            transform:translate(calc(-100% + (2*300px)));
+                        }
+                    }
+        
+                }
+            }
+        
+        }
+        
+        footer {
+            margin-top: 150px;
+            margin-left: 5%;
+        }
+
+
+
+// This is the CSS for the Blog Page
+
+.blog_grid {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.blog_container_1 {
+    
+    height: 100%;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_2 {
+   
+    height: 100%;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_3 {
+    
+    height: 100%;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_4 {
+   
+    height: 100%;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_5 {
+    
+    height: 100%;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.blog_container_6 {
+    
+    height: 100%;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+}

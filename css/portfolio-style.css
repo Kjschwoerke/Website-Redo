@@ -1,0 +1,117 @@
+main { 
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-grid-container {
+    height: 100%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 25% 25% 25% auto;
+    grid-gap: 1em;
+}
+
+#heading {
+    font-weight: bold;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+}
+
+video {
+    height: 100px;
+    width: 100px;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    border: black solid 2px;
+    background: white;
+}
+
+article {
+    background: white;
+    color: black;
+    padding: 1em;
+    text-align: center;
+    border: solid black 3px;
+    border-radius: 10px;
+    width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article img {
+   height: 200px;
+    width: 200px;
+    
+}
+
+.coupon-book {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.dashboard {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.hair {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.nasa {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: black solid 2px;
+    border-radius: 10px;
+    grid-row: 4/5;
+    grid-column: 1/3;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form p {
+    color: black;
+    text-align: center;
+}
+
+#submit {
+    border-radius: 5px;
+    width: 50%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.iframe-container {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    width: 100%;
+    height: 315px;
+    color: grey;
+}
+
+  .iframe-container iframe {
+    grid-column: 1/3;
+    display: block;
+    width: 65%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border: white solid 2px;
+  }
