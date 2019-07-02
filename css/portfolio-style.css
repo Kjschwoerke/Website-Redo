@@ -113,8 +113,8 @@ form p {
 }
 
 #submit:hover {
-    transform:translateY(-2.5px);
-    transform: scale(1.1);
+    transform:translateY(-1.5px);
+    box-shadow: 0px 3px 6px -1px rgba(46,49,51,1);
 }
 
 #reset {
@@ -152,6 +152,48 @@ form p {
       flex-direction: row-reverse;
 
   }
+
+  @media only screen and (max-width: 900px) {
+    .portfolio-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .coupon-book {
+      grid-column: 1/2;
+      grid-row: 2/3;
+  }
+  
+  .dashboard {
+      grid-column: 1/2;
+      grid-row: 3/4;
+  }
+  
+  .hair {
+      grid-column: 1/2;
+      grid-row: 4/5;
+  }
+  
+  .nasa {
+      grid-column: 1/2;
+      grid-row: 5/6;
+  }
+
+  video {
+      display: none;
+  }
+
+  .iframe-container {
+      display: none;
+  }
+
+  form {
+      grid-column: 1/2;
+      grid-row: 6/7;
+      width: 85%;
+  }
+
+}
+/* _______________Media 600px___________ */
 
   @media only screen and (max-width: 600px) {
       .portfolio-grid-container {
